@@ -1,0 +1,57 @@
+/* Remove tabs top-bar */
+#main-window[tabsintitlebar="true"]:not([extradragspace="true"]) #TabsToolbar {
+  opacity: 0;
+  pointer-events: none;
+}
+#main-window:not([tabsintitlebar="true"]) #TabsToolbar {
+    visibility: collapse !important;
+}
+
+/* Remove title section from Tree Style Tabs */
+#sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"] > #sidebar-header {
+     visibility: collapse;  
+}
+
+/* move scrollbar out of page*/
+#content browser {
+  margin-right: -14px !important;
+  overflow-y: scroll;
+}
+
+scrollbar {
+    -moz-appearance: none !important;display: none !important;
+}
+
+/* No sidebar splitter */
+#sidebar {
+    margin: -1px;
+}
+
+.sidebar-splitter { 
+    display: none;
+}
+
+/* no findbar grey border */
+.browserContainer > findbar { 
+  border: none !important; 
+}
+
+/* WINDOWS: remove top title bar (and replace it with the nav bar */
+#tabbrowser-tabs, #tabbrowser-tabs > .tabbrowser-arrowscrollbox, #tabbrowser-tabs[positionpinnedtabs] > .tabbrowser-tab[pinned] {
+	min-height: initial !important;
+}
+#nav-bar {
+    margin-right: 140px !important; 
+    height: 34px !important; 
+    margin-top:-32px !important;
+    background-color: #000 !important;
+}
+#browser {
+    margin-top: 4px;
+}
+
+/* WINDOWS: remove browser scroll bar */
+#appcontent browser {
+    overflow-y: scroll;
+    margin-right: -17px !important;
+} 
